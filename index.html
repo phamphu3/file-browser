@@ -49,7 +49,7 @@
                 </tr>
                 <tr>
                     <td><i class="fa-solid fa-file-image" style="color:#fbc02d;"></i></td>
-                    <td><a href="hello.jpg" target="_blank">Image.JPG</a></td>
+                    <td><a href="Image.JPG" target="_blank">Image.JPG</a></td>
                     <td>JPG</td>
                     <td>—</td>
                 </tr>
@@ -57,7 +57,7 @@
         </table>
         <div style="margin-top:1em;">
             <h3>Image Preview</h3>
-            <img src="hello.jpg" alt="Image.JPG" style="max-width:300px; border:1px solid #ccc;">
+            <img src="Image.JPG" alt="Image.JPG" style="max-width:300px; border:1px solid #ccc;">
         </div>
         <h2>Observations</h2>
         <ul>
@@ -66,24 +66,6 @@
             <li>HTML renders as a web page.</li>
         </ul>
     </section>
-    <section>
-        <h2>Upload a PDF</h2>
-        <input type="file" id="pdf-upload" accept="application/pdf">
-        <div id="pdf-preview" style="margin-top:1em;"></div>
-    </section>
-    <script>
-    document.getElementById('pdf-upload').addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        const preview = document.getElementById('pdf-preview');
-        preview.innerHTML = '';
-        if (file && file.type === 'application/pdf') {
-            const url = URL.createObjectURL(file);
-            preview.innerHTML = `<embed src="${url}" type="application/pdf" width="100%" height="500px" />`;
-        } else {
-            preview.textContent = 'Please select a valid PDF file.';
-        }
-    });
-    </script>
     <script src="main.js"></script>
 </body>
 </html>
